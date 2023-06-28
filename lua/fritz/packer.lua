@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    packer.lua                                         :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: fritzgabler <marvin@42.fr>                 +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/28 10:08:10 by fritzgabler       #+#    #+#              #
-#    Updated: 2023/06/28 10:20:32 by fritzgabler      ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
@@ -38,7 +26,7 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('42Paris/42header')
-use {
+  use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v2.x',
   requires = {
@@ -58,5 +46,4 @@ use {
     {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
-
 end)
