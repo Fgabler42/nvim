@@ -3,8 +3,8 @@ vim.g.mapleader = " "
 -----------ALL-LEADER-----------------------
 vim.keymap.set("n", "<leader>pv", function() vim.cmd("Ex") end)
 vim.keymap.set("n", "<leader>h", function() vim.cmd("Std") end)
-vim.keymap.set("n", "<leader>r", ":")
 vim.keymap.set("n", "<leader>vwm", function() require("vim-with-me").StartVimWithMe() end)
+vim.keymap.set("n", "<leader>l", ":")
 vim.keymap.set("n", "<leader>svwm", function() require("vim-with-me").StopVimWithMe() end)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
