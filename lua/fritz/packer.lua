@@ -13,19 +13,26 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
+use({
+	'rose-pine/neovim',
+	as = 'rose-pine',
+	config = function()
+		vim.cmd('colorscheme rose-pine')
+	end
   })
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
-  use('ThePrimeagen/harpoon')
-  use('mbbill/undotree')
-  use('tpope/vim-fugitive')
-  use('42Paris/42header')
+
+use	{
+	"windwp/nvim-autopairs",
+	config = function() require("nvim-autopairs").setup {} end
+}
+
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use('nvim-treesitter/playground')
+	use('ThePrimeagen/harpoon')
+	use('mbbill/undotree')
+	use('tpope/vim-fugitive')
+	use('42Paris/42header')
+
   use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v2.x',
