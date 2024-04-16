@@ -9,7 +9,7 @@ vim.opt.expandtab = false
 
 
 vim.opt.listchars = {
-space =' ',
+space ='·',
 tab = ' ->',
 }
 
