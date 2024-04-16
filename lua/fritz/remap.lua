@@ -20,6 +20,8 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so") end)
 vim.keymap.set('n', '<leader>k', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Change word under cursor' })
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.api.nvim_set_keymap('n', '<leader>a', ':suspend<CR>', { noremap = true, silent = true })
+
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
