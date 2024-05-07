@@ -14,6 +14,7 @@ vim.opt.expandtab = true
 vim.api.nvim_set_keymap('i', '<Tab>', '    ', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<Tab>', '    ', { noremap = true, silent = true })
 
+
 vim.opt.listchars = {
 space ='·',
 tab = ' ->',
