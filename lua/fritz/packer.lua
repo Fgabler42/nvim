@@ -26,6 +26,16 @@ use	{
 	config = function() require("nvim-autopairs").setup {} end
 }
 
+ use {
+    'kdheepak/lazygit.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '<leader>gs', ':LazyGit<CR>', { noremap = true, silent = true })
+    end
+  }
+
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
