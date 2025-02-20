@@ -5,6 +5,7 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
+  'dockerls',
 })
 
 -- Fix Undefined global 'vim'
@@ -13,7 +14,7 @@ lsp.configure('lua_ls', {
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
-            }
+            },
         }
     }
 })
@@ -27,6 +28,11 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<CR>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
 })
+
+require'lspconfig'.ts_ls.setup{
+  root_dir = require('lspconfig.util').root_pattern('package.json', 'tsconfig.json', '.git', '.gitignore', 'typescript.config.js'),
+}
+
 
 -- disable completion with tab
 -- this helps with copilot setup
@@ -98,4 +104,4 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true,
-})
+}) 
